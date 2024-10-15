@@ -22,7 +22,7 @@ helm upgrade --install ohsu funnel -f ./values.yaml
 ## GRIP 🔧
 
 ```
-helm upgrade --install ohsu funnel -f ./values.yaml 
+helm upgrade --install ohsu grip -f ./values.yaml 
 ```
 
 ## Funnel 🌪️️

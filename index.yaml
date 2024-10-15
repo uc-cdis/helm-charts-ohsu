@@ -3,18 +3,18 @@ entries:
   funnel:
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-15T16:49:28.129939-07:00"
+    created: "2024-10-15T16:55:14.676085-07:00"
     description: A Helm chart for Kubernetes
-    digest: 458f9ad69dead6ce6f7890777492bbc8e54fb2f650febf4ce049044744a56563
+    digest: c61dd4f4b108bffd2f76995198c431574d3133a4252a40478e1590943d6c573f
     name: funnel
     type: application
     urls:
-    - funnel/funnel-1.11.0.tgz
-    version: 1.11.0
+    - funnel/funnel-0.1.0.tgz
+    version: 0.1.0
   grip:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-10-15T16:49:28.133502-07:00"
+    created: "2024-10-15T16:55:14.676668-07:00"
     description: A Helm chart for Kubernetes
     digest: 2e93c50e58e2ee18b8e5403d743aa1314f2bbcc1a4d4da9bd6add7775bbaf690
     name: grip
@@ -22,4 +22,4 @@ entries:
     urls:
     - grip/grip-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-15T16:49:28.128642-07:00"
+generated: "2024-10-15T16:55:14.675166-07:00"

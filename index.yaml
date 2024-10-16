@@ -3,7 +3,17 @@ entries:
   funnel:
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-16T14:40:46.933271-07:00"
+    created: "2024-10-16T15:20:46.104285-07:00"
+    description: A toolkit for distributed task execution
+    digest: 4498ddb57b1b326c3def00854241ff7cd4c9f07f18365f8f03370ea94e8db3f6
+    name: funnel
+    type: application
+    urls:
+    - funnel/funnel-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.11.0
+    created: "2024-10-16T15:20:46.103951-07:00"
     description: A toolkit for distributed task execution
     digest: 480100d49814b19d627229370f90cd58a447c3259cd56f7bff97f10f6cd455a0
     name: funnel
@@ -13,10 +23,10 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-16T14:40:46.931174-07:00"
+    created: "2024-10-16T15:20:46.103472-07:00"
     description: Funnel is a toolkit for distributed task execution via a simple,
       standard API.
-    digest: 2b4948e264d9820fd2d0ed4f28f8f8ef2a0128d6a80d1d52e995635abb801d6e
+    digest: da6ae02aa5137126b7fc26dadfe8d2e59b91e2b8055b66a22d4d165c3d8cba83
     name: funnel
     type: application
     urls:
@@ -25,7 +35,7 @@ entries:
   grip:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-10-16T14:40:46.933801-07:00"
+    created: "2024-10-16T15:20:46.104849-07:00"
     description: A Helm chart for Kubernetes
     digest: 2e93c50e58e2ee18b8e5403d743aa1314f2bbcc1a4d4da9bd6add7775bbaf690
     name: grip
@@ -33,4 +43,4 @@ entries:
     urls:
     - grip/grip-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-16T14:40:46.930516-07:00"
+generated: "2024-10-16T15:20:46.102364-07:00"

@@ -8,8 +8,12 @@ Helm charts for deploying various projects on any kubernetes cluster.
 ## TL;DR ⚡
 ```
 helm repo add ohsu https://ohsu-comp-bio.github.io/helm-charts
-helm repo update
+helm repo update ohsu
+
+# Install GRIP
 helm upgrade --install ohsu grip
+
+# Install Funnel
 helm upgrade --install ohsu funnel
 ```
 

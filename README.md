@@ -35,3 +35,8 @@ helm upgrade --install funnel ohsu/grip --create-namespace --namespace grip
 ```
 helm upgrade --install funnel ohsu/funnel --create-namespace --namespace funnel
 ```
+
+# Additional Resources 📚
+
+- [The Chart Best Practices Guide](https://helm.sh/docs/chart_best_practices/)
+

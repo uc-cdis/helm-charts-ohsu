@@ -11,10 +11,10 @@ helm repo add ohsu https://ohsu-comp-bio.github.io/helm-charts
 helm repo update ohsu
 
 # Install GRIP
-helm upgrade --install ohsu grip
+helm install grip ohsu/grip
 
 # Install Funnel
-helm upgrade --install ohsu funnel
+helm install funnel ohsu/funnel
 ```
 
 # Programs 💻 
@@ -27,11 +27,11 @@ helm upgrade --install ohsu funnel
 ## [GRIP](https://github.com/bmeg/grip) 🔧
 
 ```
-helm upgrade --install ohsu grip -f ./values.yaml 
+helm install funnel ohsu/grip --create-namespace --namespace grip
 ```
 
 ## [Funnel](https://github.com/ohsu-comp-bio/funnel) 🌪️️
 
 ```
-helm upgrade --install ohsu funnel -f ./values.yaml 
+helm install funnel ohsu/funnel --create-namespace --namespace funnel
 ```

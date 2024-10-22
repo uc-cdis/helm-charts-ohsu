@@ -3,16 +3,6 @@ entries:
   funnel:
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-22T16:27:55.361069-07:00"
-    description: A Helm chart for Kubernetes
-    digest: 458f9ad69dead6ce6f7890777492bbc8e54fb2f650febf4ce049044744a56563
-    name: funnel
-    type: application
-    urls:
-    - funnel-1.11.0.tgz
-    version: 1.11.0
-  - apiVersion: v2
-    appVersion: 1.11.0
     created: "2024-10-22T16:27:55.363196-07:00"
     description: A toolkit for distributed task execution
     digest: ef3082a0b479ef5797173926c304ba813556342f9b64908c111cded1dd9e607f

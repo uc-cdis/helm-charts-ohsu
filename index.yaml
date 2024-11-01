@@ -3,7 +3,19 @@ entries:
   funnel:
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.36502-07:00"
+    created: "2024-11-01T15:44:25.920233-07:00"
+    description: A toolkit for distributed task execution ⚙️
+    digest: ed19ebe175158d3d36bd13f88e4ef721ffd3a144be0ec657e6a9a8b020fd3f34
+    keywords:
+    - funnel
+    name: funnel
+    type: application
+    urls:
+    - funnel/funnel-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 1.11.0
+    created: "2024-11-01T15:44:25.919136-07:00"
     description: A toolkit for distributed task execution ⚙️
     digest: 16cf0a804c9b12d1cff89702a17cf62600aca57f6ee4f2398bc7dc6467ed073a
     keywords:
@@ -15,7 +27,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.361063-07:00"
+    created: "2024-11-01T15:44:25.916564-07:00"
     description: A toolkit for distributed task execution ⚙️
     digest: 77b790ad75296df9f6cde16fbcb081754475766bbd28de7eae93aa36e54115c8
     keywords:
@@ -27,7 +39,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.360197-07:00"
+    created: "2024-11-01T15:44:25.915266-07:00"
     description: A toolkit for distributed task execution ⚙️
     digest: dd09f5070ebd2d38e6f047ad135bea9c9cbc5fdc37a6970942a79a482c84e4a7
     keywords:
@@ -39,7 +51,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.359032-07:00"
+    created: "2024-11-01T15:44:25.914209-07:00"
     description: A toolkit for distributed task execution
     digest: ef3082a0b479ef5797173926c304ba813556342f9b64908c111cded1dd9e607f
     keywords:
@@ -51,7 +63,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.358127-07:00"
+    created: "2024-11-01T15:44:25.913278-07:00"
     description: A toolkit for distributed task execution
     digest: 4498ddb57b1b326c3def00854241ff7cd4c9f07f18365f8f03370ea94e8db3f6
     name: funnel
@@ -61,7 +73,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.357543-07:00"
+    created: "2024-11-01T15:44:25.912595-07:00"
     description: A toolkit for distributed task execution
     digest: 480100d49814b19d627229370f90cd58a447c3259cd56f7bff97f10f6cd455a0
     name: funnel
@@ -71,7 +83,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.11.0
-    created: "2024-10-24T17:15:35.356068-07:00"
+    created: "2024-11-01T15:44:25.911763-07:00"
     description: Funnel is a toolkit for distributed task execution via a simple,
       standard API.
     digest: 2b4948e264d9820fd2d0ed4f28f8f8ef2a0128d6a80d1d52e995635abb801d6e
@@ -83,7 +95,7 @@ entries:
   grip:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-10-24T17:15:35.365603-07:00"
+    created: "2024-11-01T15:44:25.920826-07:00"
     description: A Helm chart for Kubernetes
     digest: 2e93c50e58e2ee18b8e5403d743aa1314f2bbcc1a4d4da9bd6add7775bbaf690
     name: grip
@@ -91,4 +103,4 @@ entries:
     urls:
     - grip/grip-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-24T17:15:35.355331-07:00"
+generated: "2024-11-01T15:44:25.909927-07:00"

@@ -38,5 +38,10 @@ helm upgrade --install funnel ohsu/funnel --create-namespace --namespace funnel
 
 # Additional Resources 📚
 
-- [The Chart Best Practices Guide](https://helm.sh/docs/chart_best_practices/)
+- [Helm Repo](https://ohsu-comp-bio.github.io/helm-charts)
 
+- [Helm Repo Source](https://github.com/ohsu-comp-bio/helm-charts)
+
+- [Helm Charts](https://github.com/ohsu-comp-bio/funnel/tree/develop/deployments/kubernetes/helm/funnel)
+
+- [The Chart Best Practices Guide](https://helm.sh/docs/chart_best_practices/)

@@ -36,6 +36,11 @@ helm upgrade --install funnel ohsu/grip --create-namespace --namespace grip
 helm upgrade --install funnel ohsu/funnel --create-namespace --namespace funnel
 ```
 
+# TODO 🌀
+
+- [ ] Add Github Actions to Funnel + Grip to automaically create and publish Helm Charts (synced with commits)
+- [ ] Add full unarchived (i.e. non-`tar.gz`) Helm Charts to repo for transparency/easier debugging
+
 # Additional Resources 📚
 
 - [Helm Repo](https://ohsu-comp-bio.github.io/helm-charts)

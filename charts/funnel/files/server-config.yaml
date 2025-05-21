@@ -139,6 +139,7 @@ GenericS3:
     Region: {{ .Region }}
   {{- end }}
 
+{{- if .Values.Plugins}}
 Plugins:
   Path: {{ .Values.Plugins.Path }}
   Params:
@@ -147,3 +148,4 @@ Plugins:
     {{ $key }}: {{ $value }}
   {{- end }}
   {{- end }}
+{{- end}}

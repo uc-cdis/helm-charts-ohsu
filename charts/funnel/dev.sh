@@ -6,7 +6,7 @@ source ~/.bashrc
 git clone https://github.com/ohsu-comp-bio/funnel.git
 git clone https://github.com/ohsu-comp-bio/funnel-plugins.git
 rm -f /app/funnel
-cd funnel && git checkout feature/plugins-cleanup && go build . && go install .
+cd funnel && git checkout feature/plugins && go build . && go install .
 
 
 

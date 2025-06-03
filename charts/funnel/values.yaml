@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
   repository: quay.io/ohsu-comp-bio/funnel
-  tag: "2025-05-22-2"
+  tag: "2025-06-03"
   pullPolicy: Always
   # Plugin Init Container
   initContainer:

@@ -1,6 +1,6 @@
 # funnel
 
-![Version: 0.1.43](https://img.shields.io/badge/Version-0.1.43-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2025-06-05](https://img.shields.io/badge/AppVersion-2025--06--05-informational?style=flat-square)
+![Version: 0.1.44](https://img.shields.io/badge/Version-0.1.44-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2025-06-05-2](https://img.shields.io/badge/AppVersion-2025--06--05--2-informational?style=flat-square)
 
 A toolkit for distributed task execution ⚙️
 
@@ -120,7 +120,7 @@ A toolkit for distributed task execution ⚙️
 | image.initContainer.tag | string | `"pr-1"` |  |
 | image.pullPolicy | string | `"Always"` |  |
 | image.repository | string | `"quay.io/ohsu-comp-bio/funnel"` |  |
-| image.tag | string | `"2025-06-05"` |  |
+| image.tag | string | `"2025-06-05-2"` |  |
 | labels.app | string | `"funnel"` |  |
 | mongodb.architecture | string | `"standalone"` |  |
 | mongodb.auth.enabled | bool | `true` |  |

@@ -1,7 +1,6 @@
 # funnel
-Currently we are developing with the same format as the example_dev_values.yaml file
 
-![Version: 0.1.34](https://img.shields.io/badge/Version-0.1.34-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.11.2](https://img.shields.io/badge/AppVersion-0.11.2-informational?style=flat-square)
+![Version: 0.1.43](https://img.shields.io/badge/Version-0.1.43-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2025-06-05](https://img.shields.io/badge/AppVersion-2025--06--05-informational?style=flat-square)
 
 A toolkit for distributed task execution ⚙️
 
@@ -19,23 +18,23 @@ A toolkit for distributed task execution ⚙️
 | AWSBatch.JobDefinition | string | `"funnel-job-def"` |  |
 | AWSBatch.JobQueue | string | `"funnel-job-queue"` |  |
 | AWSBatch.Key | string | `""` |  |
-| AWSBatch.ReconcileRate | string | `"10m"` |  |
+| AWSBatch.ReconcileRate | string | `"600s"` |  |
 | AWSBatch.Region | string | `""` |  |
 | AWSBatch.Secret | string | `""` |  |
+| AmazonS3.AWSConfig.Key | string | `""` |  |
+| AmazonS3.AWSConfig.MaxRetries | int | `10` |  |
+| AmazonS3.AWSConfig.Secret | string | `""` |  |
 | AmazonS3.Disabled | bool | `false` |  |
-| AmazonS3.Key | string | `""` |  |
-| AmazonS3.MaxRetries | int | `10` |  |
 | AmazonS3.SSE.CustomerKeyFile | string | `""` |  |
 | AmazonS3.SSE.KMSKey | string | `""` |  |
-| AmazonS3.Secret | string | `""` |  |
 | BoltDB.Path | string | `"./funnel-work-dir/funnel.db"` |  |
 | Compute | string | `"kubernetes"` |  |
 | Database | string | `"mongodb"` |  |
 | Datastore.CredentialsFile | string | `""` |  |
 | Datastore.Project | string | `""` |  |
-| DynamoDB.Key | string | `""` |  |
-| DynamoDB.Region | string | `""` |  |
-| DynamoDB.Secret | string | `""` |  |
+| DynamoDB.AWSConfig.Key | string | `""` |  |
+| DynamoDB.AWSConfig.Region | string | `""` |  |
+| DynamoDB.AWSConfig.Secret | string | `""` |  |
 | DynamoDB.TableBasename | string | `"funnel"` |  |
 | Elastic.IndexPrefix | string | `"funnel"` |  |
 | Elastic.URL | string | `"http://localhost:9200"` |  |
@@ -50,60 +49,53 @@ A toolkit for distributed task execution ⚙️
 | GridEngine.Template | string | `"#!bin/bash\n#$ -N {{.TaskId}}\n#$ -o {{.WorkDir}}/funnel-stdout\n#$ -e {{.WorkDir}}/funnel-stderr\n#$ -l nodes=1\n{{if ne .Cpus 0 -}}\n{{printf \"#$ -pe mpi %d\" .Cpus}}\n{{- end}}\n{{if ne .RamGb 0.0 -}}\n{{printf \"#$ -l h_vmem=%.0fG\" .RamGb}}\n{{- end}}\n{{if ne .DiskGb 0.0 -}}\n{{printf \"#$ -l h_fsize=%.0fG\" .DiskGb}}\n{{- end}}\n\n{{.Executable}} worker run --config {{.Config}} --taskID {{.TaskId}}\n"` |  |
 | GridEngine.TemplateFile | string | `""` |  |
 | HTCondor.DisableReconciler | bool | `true` |  |
-| HTCondor.ReconcileRate | string | `"10m"` |  |
+| HTCondor.ReconcileRate | string | `"600s"` |  |
 | HTCondor.Template | string | `"universe = vanilla\ngetenv = True\nexecutable = {{.Executable}}\narguments = worker run --config {{.Config}} --task-id {{.TaskId}}\nlog = {{.WorkDir}}/condor-event-log\nerror = {{.WorkDir}}/funnel-stderr\noutput = {{.WorkDir}}/funnel-stdout\nshould_transfer_files = YES\nwhen_to_transfer_output = ON_EXIT_OR_EVICT\n{{if ne .Cpus 0 -}}\n{{printf \"request_cpus = %d\" .Cpus}}\n{{- end}}\n{{if ne .RamGb 0.0 -}}\n{{printf \"request_memory = %.0f GB\" .RamGb}}\n{{- end}}\n{{if ne .DiskGb 0.0 -}}\n{{printf \"request_disk = %.0f GB\" .DiskGb}}\n{{- end}}\n\nqueue\n"` |  |
 | HTCondor.TemplateFile | string | `""` |  |
 | HTTPStorage.Timeout | string | `"30s"` |  |
-| Kafka.Servers[0] | string | `""` |  |
 | Kafka.Topic | string | `"funnel"` |  |
-| Kubernetes.Bucket | string | `""` |  |
-| Kubernetes.DisableReconciler | bool | `true` |  |
+| Kubernetes.DisableJobCleanup | bool | `false` |  |
+| Kubernetes.DisableReconciler | bool | `false` |  |
 | Kubernetes.Executor | string | `"kubernetes"` |  |
 | Kubernetes.ExecutorTemplate | string | `""` |  |
-| Kubernetes.ExecutorTemplateFile | string | `""` |  |
 | Kubernetes.JobsNamespace | string | `""` |  |
 | Kubernetes.Namespace | string | `""` |  |
-| Kubernetes.ReconcileRate | string | `"10m"` |  |
-| Kubernetes.Region | string | `""` |  |
+| Kubernetes.PVCTemplate | string | `""` |  |
+| Kubernetes.PVTemplate | string | `""` |  |
+| Kubernetes.ReconcileRate | string | `"600s"` |  |
 | Kubernetes.ServiceAccount | string | `""` |  |
-| Kubernetes.Template | string | `""` |  |
-| Kubernetes.TemplateFile | string | `""` |  |
+| Kubernetes.WorkerTemplate | string | `""` |  |
 | LocalStorage.AllowedDirs[0] | string | `"./"` |  |
-| Logger.Level | string | `"info"` |  |
-| Logger.OutputFile | string | `""` |  |
+| Logger.level | string | `"debug"` |  |
+| Logger.outputFile | string | `""` |  |
 | MongoDB.Addrs | list | `[]` |  |
 | MongoDB.Database | string | `"funnel"` |  |
 | MongoDB.Password | string | `"example"` |  |
-| MongoDB.Timeout | string | `"5m"` |  |
+| MongoDB.Timeout.duration | string | `"300s"` |  |
 | MongoDB.Username | string | `"example"` |  |
 | Node.ID | string | `""` |  |
 | Node.Resources.Cpus | int | `0` |  |
 | Node.Resources.DiskGb | float | `0` |  |
 | Node.Resources.RamGb | float | `0` |  |
-| Node.Timeout | string | `"-1s"` |  |
+| Node.Timeout.disabled | bool | `true` |  |
 | Node.UpdateRate | string | `"5s"` |  |
 | PBS.DisableReconciler | bool | `true` |  |
-| PBS.ReconcileRate | string | `"10m"` |  |
+| PBS.ReconcileRate | string | `"600s"` |  |
 | PBS.Template | string | `"#!bin/bash\n#PBS -N {{.TaskId}}\n#PBS -o {{.WorkDir}}/funnel-stdout\n#PBS -e {{.WorkDir}}/funnel-stderr\n{{if ne .Cpus 0 -}}\n{{printf \"#PBS -l nodes=1:ppn=%d\" .Cpus}}\n{{- end}}\n{{if ne .RamGb 0.0 -}}\n{{printf \"#PBS -l mem=%.0fgb\" .RamGb}}\n{{- end}}\n{{if ne .DiskGb 0.0 -}}\n{{printf \"#PBS -l file=%.0fgb\" .DiskGb}}\n{{- end}}\n\n{{.Executable}} worker run --config {{.Config}} --taskID {{.TaskId}}\n"` |  |
 | PBS.TemplateFile | string | `""` |  |
-| Plugins.Dir | string | `"plugin-binaries"` |  |
-| Plugins.Disabled | bool | `true` |  |
-| Plugins.Host | string | `"http://funnel-plugin-test-server:8080/token?user="` |  |
-| Plugins.Input | string | `"user"` |  |
-| Plugins.Plugin | string | `"auth-plugin"` |  |
 | RPCClient.MaxRetries | int | `10` |  |
 | RPCClient.ServerAddress | string | `"localhost:9090"` |  |
-| RPCClient.Timeout | string | `"60s"` |  |
-| Scheduler.NodeInitTimeout | string | `"5m"` |  |
-| Scheduler.NodePingTimeout | string | `"1m"` |  |
+| RPCClient.Timeout.duration | string | `"60s"` |  |
+| Scheduler.NodeInitTimeout.duration | string | `"300s"` |  |
+| Scheduler.NodePingTimeout.duration | string | `"60s"` |  |
 | Scheduler.ScheduleChunk | int | `10` |  |
 | Scheduler.ScheduleRate | string | `"1s"` |  |
 | Server.DisableHTTPCache | bool | `true` |  |
-| Server.HTTPPort | int | `8000` |  |
+| Server.HTTPPort | string | `"8000"` |  |
 | Server.HostName | string | `"funnel"` |  |
-| Server.RPCPort | int | `9090` |  |
+| Server.RPCPort | string | `"9090"` |  |
 | Slurm.DisableReconciler | bool | `true` |  |
-| Slurm.ReconcileRate | string | `"10m"` |  |
+| Slurm.ReconcileRate | string | `"600s"` |  |
 | Slurm.Template | string | `"#!/bin/bash\n#SBATCH --job-name {{.TaskId}}\n#SBATCH --ntasks 1\n#SBATCH --error {{.WorkDir}}/funnel-stderr\n#SBATCH --output {{.WorkDir}}/funnel-stdout\n{{if ne .Cpus 0 -}}\n{{printf \"#SBATCH --cpus-per-task %d\" .Cpus}}\n{{- end}}\n{{if ne .RamGb 0.0 -}}\n{{printf \"#SBATCH --mem %.0fGB\" .RamGb}}\n{{- end}}\n{{if ne .DiskGb 0.0 -}}\n{{printf \"#SBATCH --tmp %.0fGB\" .DiskGb}}\n{{- end}}\n\n{{.Executable}} worker run --config {{.Config}} --taskID {{.TaskId}}\n"` |  |
 | Slurm.TemplateFile | string | `""` |  |
 | Swift.AuthURL | string | `""` |  |
@@ -125,10 +117,10 @@ A toolkit for distributed task execution ⚙️
 | image.initContainer.command[2] | string | `"/opt/funnel/plugin-binaries/auth-plugin"` |  |
 | image.initContainer.image | string | `"quay.io/ohsu-comp-bio/funnel-plugins"` |  |
 | image.initContainer.pullPolicy | string | `"Always"` |  |
-| image.initContainer.tag | string | `"latest"` |  |
+| image.initContainer.tag | string | `"pr-1"` |  |
 | image.pullPolicy | string | `"Always"` |  |
 | image.repository | string | `"quay.io/ohsu-comp-bio/funnel"` |  |
-| image.tag | string | `"testing"` |  |
+| image.tag | string | `"2025-06-05"` |  |
 | labels.app | string | `"funnel"` |  |
 | mongodb.architecture | string | `"standalone"` |  |
 | mongodb.auth.enabled | bool | `true` |  |
@@ -139,10 +131,10 @@ A toolkit for distributed task execution ⚙️
 | mongodb.persistence.size | string | `"1Gi"` |  |
 | rbac.create | bool | `true` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.cpu | string | `"1000m"` |  |
-| resources.limits.memory | string | `"1Gi"` |  |
-| resources.requests.cpu | string | `"100m"` |  |
-| resources.requests.memory | string | `"100Mi"` |  |
+| resources.limits.cpu | int | `0` |  |
+| resources.limits.memory | int | `0` |  |
+| resources.requests.cpu | int | `0` |  |
+| resources.requests.memory | int | `0` |  |
 | service.httpPort | int | `8000` |  |
 | service.rpcPort | int | `9090` |  |
 | service.type | string | `"ClusterIP"` |  |

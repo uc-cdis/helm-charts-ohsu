@@ -433,6 +433,7 @@ AmazonS3:
 #     Endpoint: ""
 #     Key: ""
 #     Secret: ""
+#     KmsKeyID: ""
 
 GoogleStorage:
   Disabled: false

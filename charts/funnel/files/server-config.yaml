@@ -137,6 +137,7 @@ GenericS3:
     Secret: {{ .Secret }}
     Bucket: {{ .Bucket }}
     Region: {{ .Region }}
+    KmsKeyID: {{ .KmsKeyID }}
   {{- end }}
 
 {{- if .Values.Plugins}}

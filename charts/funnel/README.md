@@ -1,6 +1,6 @@
 # funnel
 
-![Version: 0.1.48](https://img.shields.io/badge/Version-0.1.48-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2025-06-25](https://img.shields.io/badge/AppVersion-2025--06--25-informational?style=flat-square)
+![Version: 0.1.49](https://img.shields.io/badge/Version-0.1.49-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2025-06-25](https://img.shields.io/badge/AppVersion-2025--06--25-informational?style=flat-square)
 
 A toolkit for distributed task execution ⚙️
 
@@ -8,7 +8,7 @@ A toolkit for distributed task execution ⚙️
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | mongodb | 13.9.4 |
+| https://charts.bitnami.com/bitnami | funnel-mongodb | 13.9.4 |
 
 ## Values
 

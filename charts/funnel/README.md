@@ -8,7 +8,7 @@ A toolkit for distributed task execution ⚙️
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | funnel-mongodb | 13.9.4 |
+| https://charts.bitnami.com/bitnami | mongodb | 13.9.4 |
 
 ## Values
 

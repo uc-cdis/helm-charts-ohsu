@@ -19,8 +19,7 @@ labels:
 
 # Funnel Server (Task Database)
 mongodb:
-  commonLabels:
-    app: funnel
+    app: funnel-mongodb
   image:
     registry: public.ecr.aws
   architecture: standalone

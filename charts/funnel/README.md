@@ -121,11 +121,11 @@ A toolkit for distributed task execution ⚙️
 | image.pullPolicy | string | `"Always"` |  |
 | image.repository | string | `"quay.io/ohsu-comp-bio/funnel"` |  |
 | labels.app | string | `"funnel"` |  |
+| mongodb.app | string | `"funnel-mongodb"` |  |
 | mongodb.architecture | string | `"standalone"` |  |
 | mongodb.auth.enabled | bool | `true` |  |
 | mongodb.auth.rootPassword | string | `"example"` |  |
 | mongodb.auth.rootUser | string | `"example"` |  |
-| mongodb.commonLabels.app | string | `"funnel"` |  |
 | mongodb.image.registry | string | `"public.ecr.aws"` |  |
 | mongodb.persistence.enabled | bool | `false` |  |
 | mongodb.persistence.size | string | `"1Gi"` |  |

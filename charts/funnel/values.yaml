@@ -458,3 +458,30 @@ FTPStorage:
   Timeout: 10s
   User: "anonymous"
   Password: "anonymous"
+
+volumes:
+  - name: config-volume
+    configMap:
+      name: funnel-server-config
+
+  - name: worker-templates-volume
+    configMap:
+      name: funnel-worker-templates
+
+  - name: plugin-volume
+    emptyDir: {}  # Shared volume
+
+volumeMounts:
+  - name: config-volume
+    mountPath: /etc/config
+
+  - name: worker-templates-volume
+    mountPath: /etc/funnel/templates
+
+  - name: plugin-volume
+    mountPath: /opt/funnel/plugin-binaries
+
+
+initVolumeMounts:
+- name: plugin-volume
+  mountPath: /opt/funnel/plugin-binaries

@@ -30,7 +30,7 @@ spec:
           image: {{ .Values.image.initContainer.image }}:{{ .Values.image.initContainer.tag }}
           imagePullPolicy: Always
           volumeMounts:
-          {{- toYaml .Values.initVolumeMounts | nindent 8 }}
+          {{- toYaml .Values.initVolumeMounts | nindent 10 }}
           command: {{- range .Values.image.initContainer.command }}
             - {{ . }}
           {{- end }}

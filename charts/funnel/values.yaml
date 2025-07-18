@@ -459,6 +459,8 @@ FTPStorage:
   User: "anonymous"
   Password: "anonymous"
 
+# Overrides the default volumes configured in the server deployment.
+# If custom volumes are specified, they will fully replace the default values.
 volumes:
   - name: config-volume
     configMap:
@@ -471,6 +473,8 @@ volumes:
   - name: plugin-volume
     emptyDir: {}  # Shared volume
 
+# Overrides the default volumesMounts configured in the server deployment.
+# If custom volumesMounts are specified, they will fully replace the default values.
 volumeMounts:
   - name: config-volume
     mountPath: /etc/config
@@ -481,7 +485,8 @@ volumeMounts:
   - name: plugin-volume
     mountPath: /opt/funnel/plugin-binaries
 
-
+# Overrides the default init container VolumesMounts configured in the server deployment.
+# If custom init container volumesMounts are specified, they will fully replace the default values.
 initVolumeMounts:
 - name: plugin-volume
   mountPath: /opt/funnel/plugin-binaries
